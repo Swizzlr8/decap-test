@@ -38,7 +38,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Authors', name: 'authors', widget: 'string' }
-      - { label: 'Publish Date', name: 'pubdate', widget: 'datetime', format: 'DD.MM.YYYY', default: '' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', format: 'LLL', timeFormat: false, dateFormat: 'YYYY-MM-DD', picker_utc: false }
       - { label: 'PDF Title', name: 'pdf-title', widget: 'string' }
       - { label: 'PDF File', name: 'pdf-file', widget: 'file' }
       - { label: 'DOI', name: 'doi', widget: 'string' }
