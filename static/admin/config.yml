@@ -38,10 +38,10 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Authors', name: 'authors', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime', format: 'DD.MM.YYYY' }
+      - { label: 'Publish Date', name: 'pubdate', widget: 'datetime', format: 'DD.MM.YYYY', default: '' }
       - { label: 'PDF Title', name: 'pdf-title', widget: 'string' }
-      - { label: 'PDF Link', name: 'pdf-link', widget: 'string' }
+      - { label: 'PDF File', name: 'pdf-file', widget: 'file' }
       - { label: 'DOI', name: 'doi', widget: 'string' }
-      - { label: 'description', name: 'description', widget: 'markdown' }
-      - { label: 'Images', name: 'images', widget: 'list', fields: [{ name: 'path', label: 'Image', widget: 'image'}, { name: 'alt', label: 'Alt', widget: 'string'} ] }
+#     - { label: 'description', name: 'description', widget: 'markdown' }
+#     - { label: 'Images', name: 'images', widget: 'list', fields: [{ name: 'path', label: 'Image', widget: 'image'}, { name: 'alt', label: 'Alt', widget: 'string'} ] }
  
