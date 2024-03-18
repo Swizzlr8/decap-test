@@ -1,0 +1,30 @@
+{{- define "main" }}
+  <pre>Layout: papers/list.html</pre>
+  <h1>Papers </h1>
+
+  {{- $years := slice -}}
+  {{- range .Pages -}}
+    {{ $years = $years | append (.Date.Format "2006")  -}}
+  {{- end -}}
+
+  {{ $years = sort (uniq $years) "value" "desc" -}}
+  {{- range $years -}}
+    {{- $year := . -}}
+    {{- $papers := where $.Pages "year" "eq" $year }}
+    <a href="#{{ $year }}">{{ $year }}<sup class="archive-count">&nbsp;{{ len $papers }}</sup> | </a>
+  {{- end -}}
+  {{/*
+  {{- $i := len .Pages -}}
+  {{- range $years -}}
+    {{- $year := . -}}
+    <hr><h2 class="archive-year-header" id="{{ $year }}">{{ $year }}</h2>
+    <ol ol reversed="" start={{ $i }}>
+        {{- range where (time.Format $.Pages.Date "2006") $year }}
+          <li>{{ partial "publication.html" . }}</li>
+          {{- $i = sub $i 1 }}
+        {{- end }}
+    </ol>  
+  {{- end }}
+  */}}
+{{- end -}}
+
