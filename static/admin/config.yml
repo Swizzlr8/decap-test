@@ -43,4 +43,6 @@ collections:
       - { label: 'PDF Link', name: 'pdf-link', widget: 'string' }
       - { label: 'DOI', name: 'doi', widget: 'string' }
       - { label: 'description', name: 'description', widget: 'markdown' }
+      - { label: 'Tags', name: 'tags', widget: 'select', multiple: true, options: [ foo, bar, baz] }
+      - { label: 'Images', name: 'images', widget: 'list', fields: [name: 'path', label: 'Image', widget: 'image', name: 'alt', label: 'Alt', widget: 'string'] }
  
