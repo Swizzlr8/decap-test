@@ -28,3 +28,19 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'papers'
+    label: 'Papers'
+    folder: 'content/papers'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Authors', name: 'authors', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'PDF Title', name: 'pdf-title', widget: 'string' }
+      - { label: 'PDF Link', name: 'ipdf-link', widget: 'string' }
+      - { label: 'DOI', name: 'doi', widget: 'string' }
+      - { label: 'description', name: 'description', widget: 'markdown' }
+ 
