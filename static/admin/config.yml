@@ -38,7 +38,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Authors', name: 'authors', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', format: 'DD.MM.YYYY' }
       - { label: 'PDF Title', name: 'pdf-title', widget: 'string' }
       - { label: 'PDF Link', name: 'pdf-link', widget: 'string' }
       - { label: 'DOI', name: 'doi', widget: 'string' }
